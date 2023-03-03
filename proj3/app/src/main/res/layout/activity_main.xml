@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="user"
+            type="com.example.proj3.User" />
+        <variable
+            name="movie"
+            type="com.example.proj3.Movie" />
+        <variable
+            name="selected"
+            type="com.example.proj3.Selected" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@{`imie=`+user.fName + `,nazwisko=` + user.lName}"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/button"
+            android:text="zmien dane usera"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Insomnia"
+            android:id="@+id/editview"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@={movie.title}"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkbox"
+            android:text="@{selected.checked?`aa`:`bb`}"/>
+
+
+    </LinearLayout>
+</layout>
