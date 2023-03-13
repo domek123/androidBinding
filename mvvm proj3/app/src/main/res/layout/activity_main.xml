@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="PersonViewModel"
+            type="com.example.proj3.viewmodel.PersonViewModel" />
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="CHNAGE NAME"
+        android:id="@+id/btn1"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="CHANGE GENRE"
+        android:id="@+id/btn2"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="CHANGE ALL"
+        android:id="@+id/btn3"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="25dp"
+        android:text="@{PersonViewModel.personName}"
+        android:textColor="@color/yellow"
+        android:textAllCaps="true"
+        android:textAlignment="center"
+        android:id="@+id/tv1"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="25dp"
+        android:text="@{PersonViewModel.personGenre}"
+        android:textColor="@color/green"
+        android:textAllCaps="true"
+        android:textAlignment="center"
+        android:id="@+id/tv2"/>
+
+</LinearLayout>
+</layout>
